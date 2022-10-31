@@ -1,0 +1,24 @@
+{
+  "name": "css-frameworks",
+  "version": "0.0.1",
+  "description": "School project learning about CSS Frameworks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdragvik/CSS-Frameworks.git"
+  },
+  "keywords": [
+    "CSS",
+    "frameworks",
+    "bootstrap"
+  ],
+  "author": "Christiane Nanette Dragvik <cndragvik@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdragvik/CSS-Frameworks/issues"
+  },
+  "homepage": "https://github.com/cdragvik/CSS-Frameworks#readme"
+}
