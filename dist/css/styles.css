@@ -10777,4 +10777,9 @@ textarea.form-control-lg {
   max-width: 250px;
 }
 
+.border {
+  padding: 30px;
+  margin: auto;
+}
+
 /*# sourceMappingURL=styles.css.map */
