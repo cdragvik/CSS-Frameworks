@@ -1,3 +1,4 @@
+@import "../../node_modules/bootstrap/scss/functions";
 @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
@@ -10,4 +11,14 @@
 .border {
     padding: 30px;
     margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 10px;
 }
