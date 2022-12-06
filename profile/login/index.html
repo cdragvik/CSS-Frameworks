@@ -8,30 +8,22 @@
     <link rel="stylesheet" href="/dist/css/styles.css">
 </head>
 <body class="bg-primary d-flex flex-column min-vh-100">
-    <nav class="navbar bg-light">
-        <a class="navbar-brand d-flex m-auto"><img src="images/SoMe.png" class="logo"></a>
-  </nav>
-</header>
+    <header class="sticky-top">
+        <nav class="navbar bg-light">
+              <a class="navbar-brand d-flex m-auto"><img src="images/SoMe.png" class="logo"></a>
+        </nav>
+    </header>
     <main>
         <div class="border card bg-secondary col-6 mt-4">
-            <h1>Sign up</h1>
+          <h1>Log in</h1>
             <form>
-                <div class="mb-3">
-                    <label for="username" class="form-label">Username</label>
-                    <input 
-                      type="text" 
-                      class="form-control" 
-                      id="username" 
-                      placeholder="Username" 
-                      required>
-                  </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
                   <input 
                     type="email" 
                     class="form-control" 
                     id="email" 
-                    placeholder="Email (@stud.noroff.no or @noroff.no)" 
+                    placeholder="email@address.com" 
                     required>
                 </div>
                 <div class="mb-3">
@@ -43,9 +35,9 @@
                     placeholder="*****" 
                     required>
                 </div>
-                <a type="submit" class="btn btn-light btn-lg" href="home.html">Sign up</a>
+                <a type="submit" class="btn btn-light btn-lg" href="/profile/index.html">Log in</a>
                 <hr class="my-4" />
-                <p>Already have an account? <a class="btn btn-primary" href="index.html">Log in!</a></p>
+                <p>Don't have an account? <a class="btn btn-primary" href="/profile/signup/index.html">Sign up!</a></p>
               </form>
         </div>
         <br>
