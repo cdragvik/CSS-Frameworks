@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width>, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/dist/css/styles.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/src/js/index.mjs" type="module"></script>
 </head>
 <body class="bg-primary d-flex flex-column min-vh-100">
     <header class="sticky-top">
         <nav class="navbar bg-light">
-              <a class="navbar-brand d-flex m-auto"><img src="images/SoMe.png" class="logo"></a>
+              <a class="navbar-brand d-flex m-auto"><img src="/images/SoMe.png" class="logo"></a>
         </nav>
     </header>
     <main>
         <div class="border card bg-secondary col-6 mt-4">
           <h1>Log in</h1>
-            <form>
+            <form id="loginForm">
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
                   <input 
@@ -35,10 +37,10 @@
                     placeholder="*****" 
                     required>
                 </div>
-                <a type="submit" class="btn btn-light btn-lg" href="/profile/index.html">Log in</a>
-                <hr class="my-4" />
-                <p>Don't have an account? <a class="btn btn-primary" href="/profile/signup/index.html">Sign up!</a></p>
+                <button type="submit" class="btn btn-light btn-lg">Log in</button>
               </form>
+              <hr class="my-4" />
+              <p>Don't have an account? <a class="btn btn-primary" href="/profile/signup/index.html">Sign up!</a></p>
         </div>
         <br>
         <br>
