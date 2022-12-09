@@ -1,0 +1,19 @@
+import { BASE_URL } from "../constants.mjs"; 
+import { authFetch } from "../authFetch.mjs";
+
+const action = "/posts";
+const method = "post";
+
+export async function createPost(postData) {
+    
+    const createPostURL = BASE_URL + action;
+    
+    const response = await authFetch (createPostURL, {
+        method,
+        body: JSON.stringify(postData)
+    })
+
+    const post = await response.json(); 
+
+    console.log(post);
+}
