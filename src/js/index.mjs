@@ -1,11 +1,13 @@
 import { setRegisterFormListener } from "./handlers/signup.mjs";
 import { setLoginFormListener } from "./handlers/login.mjs";
-import { removePost } from "./api/posts/delete.mjs";
+import * as post from "./api/posts/index.mjs";
 
 
 setRegisterFormListener()
 setLoginFormListener()
 
-
-removePost(817)
-
+// post.createPost()
+// post.updatePost()
+// post.removePost()
+// post.getPost()
+// post.getPosts()
