@@ -1,15 +1,11 @@
 import { setRegisterFormListener } from "./handlers/signup.mjs";
 import { setLoginFormListener } from "./handlers/login.mjs";
-import { updatePost} from "./api/posts/update.mjs"
+import { removePost } from "./api/posts/delete.mjs";
 
 
 setRegisterFormListener()
 setLoginFormListener()
 
 
-updatePost({
-    title: "Frank er søt",
-    body: "fordi han er fin", 
-    id: 817, 
-})
+removePost(817)
 
