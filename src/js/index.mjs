@@ -8,7 +8,7 @@ setLoginFormListener()
 
 
 createPost({
-    title: "an example",
-    body: "also an example"
+    title: "Frank er kul",
+    body: "fordi han er ginger"
 })
 

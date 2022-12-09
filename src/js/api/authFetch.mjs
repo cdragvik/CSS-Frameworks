@@ -3,7 +3,7 @@ import { load } from "../storage/index.mjs";
 export function headers() {
   const token = load("token");
   return {
-    "Contant-Type": "application/json",
+    "Content-Type": "application/json",
     "Authorization": `Bearer ${token}`
   }
 }
