@@ -1,14 +1,15 @@
 import { setRegisterFormListener } from "./handlers/signup.mjs";
 import { setLoginFormListener } from "./handlers/login.mjs";
-import { createPost} from "./api/posts/create.mjs"
+import { updatePost} from "./api/posts/update.mjs"
 
 
 setRegisterFormListener()
 setLoginFormListener()
 
 
-createPost({
-    title: "Frank er kul",
-    body: "fordi han er ginger"
+updatePost({
+    title: "Frank er søt",
+    body: "fordi han er fin", 
+    id: 817, 
 })
 
