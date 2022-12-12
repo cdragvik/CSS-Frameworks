@@ -8,6 +8,7 @@ listeners.setRegisterFormListener()
 listeners.setLoginFormListener()
 listeners.setCreateFormListener()
 listeners.setUpdateFormListener()
+listeners.setUpdateProfileListener()
 
 // post.createPost()
 // post.updatePost()
