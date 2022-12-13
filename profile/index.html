@@ -13,7 +13,7 @@
     <header class="sticky-top">
         <nav class="navbar navbar-expand-md bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="index.html"><img src="images/SoMe.png" class="logo"></a>
+              <a class="navbar-brand" href="index.html"><img src="/images/SoMe.png" class="logo"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -35,72 +35,42 @@
 
                     <div class="col-12 col-md-4">
                         <div class="text-center">
-                            <img src="images/profile-picture.jpg" alt="Profile picture"class="rounded-circle logo">
-                            <h1>Christiane Dragvik</h1>
+                            <img src="/images/portrait.jpg" alt="Profile picture"class="rounded-circle logo">
+                            
                         </div>
             
-                        <div class="border card bg-secondary m-2">
-                            <p>Asker, Norway</p>
-                            <p>Student at Noroff</p>
-                            <p>cndragvik@gmail.com</p>
-                            <p>+47 968 29 487</p>
+                        <div class="card p-2 bg-secondary m-2">
+                            <h2>Username</h2>
+                            <p>email@noroff.no</p>
                         </div>
 
-                        <div class="border card bg-secondary m-2">
-                            <h3>Contacts</h3>
-                            <div class="d-flex">
-                                <img width="40px"src="images/proflie.png" alt="Profile pictue of contact">
-                                <p>Username</p>                        
-                            </div>
-                            <div class="d-flex">
-                                <img width="40px"src="images/proflie.png" alt="Profile pictue of contact">
-                                <p>Username</p>                        
-                            </div>
-                            <div class="d-flex">
-                                <img width="40px"src="images/proflie.png" alt="Profile pictue of contact">
-                                <p>Username</p>                        
-                            </div>
-                            <div class="d-flex">
-                                <img width="40px"src="images/proflie.png" alt="Profile pictue of contact">
-                                <p>Username</p>                        
-                            </div>
-                            <div class="d-flex">
-                                <img width="40px"src="images/proflie.png" alt="Profile pictue of contact">
-                                <p>Username</p>                        
-                            </div>
+                        <div class="card p-2 bg-secondary m-2">
+                            <h2>Contacts</h2>
+
                         </div>
                     </div>
 
                     <div class="col-12 col-md-8 p-3">
 
-                        <div>
-                            <h2>Share something</h2>
-                            <textarea rows="5" class="form-control mt-4 mb-2" placeholder="Publish something on Christiane's feed..."></textarea>
-                            <button class="btn btn-secondary mb-4" type="submit">Publish</button>
-                        </div>
+                        <form id="createPost" class="m-auto ccol-12 card p-4">
 
-                        <h2>Feed</h2>
-                        <div class="card p-2 mb-2">
-                            <div class="card-body">
-                                <h3>Christiane says:</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at libero massa. Morbi at lacus dignissim, convallis risus nec, congue ligula. Ut eu quam hendrerit, ultricies nibh nec, maximus nulla. Nam tristique libero nunc, id sollicitudin orci pellentesque convallis. Donec sit amet vestibulum diam. Vivamus ornare nisl in diam dignissim commodo. In hac habitasse platea dictumst. Nulla id ex sed ipsum vestibulum varius in sed ex.</p>
-                                <p class="card-text"><small class="text-muted">Published 2 hours and 21 minutes ago</small></p>
+                            <h2>Share something</h2>
+
+                            <div class="form-group mb-3">
+                              <label for="">Title</label>
+                              <input type="text" name="title" class="form-control" placeholder="Title" required>
                             </div>
-                        </div>
-                        <div class="card p-2 mb-2">
-                            <div class="card-body">
-                                <h3>Christiane says:</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at libero massa. Morbi at lacus dignissim, convallis risus nec, congue ligula. Ut eu quam hendrerit, ultricies nibh nec, maximus nulla. Nam tristique libero nunc, id sollicitudin orci pellentesque convallis. Donec sit amet vestibulum diam. Vivamus ornare nisl in diam dignissim commodo. In hac habitasse platea dictumst. Nulla id ex sed ipsum vestibulum varius in sed ex.</p>
-                                <p class="card-text"><small class="text-muted">Published 4 days ago</small></p>
+                
+                            <div class="form-group mb-3">
+                                <label for="">Body</label>
+                                <textarea  name="body" class="form-control" placeholder="What´s on your mind..." required></textarea>
                             </div>
-                        </div>
-                        <div class="card p-2">
-                            <div class="card-body">
-                                <h3>Christiane says:</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at libero massa. Morbi at lacus dignissim, convallis risus nec, congue ligula. Ut eu quam hendrerit, ultricies nibh nec, maximus nulla. Nam tristique libero nunc, id sollicitudin orci pellentesque convallis. Donec sit amet vestibulum diam. Vivamus ornare nisl in diam dignissim commodo. In hac habitasse platea dictumst. Nulla id ex sed ipsum vestibulum varius in sed ex.</p>
-                                <p class="card-text"><small class="text-muted">Published 1 week ago</small></p>
-                            </div>
-                        </div>
+                
+                            <button class="btn btn-light">Create post</button>
+                        </form>
+
+                        <h1 class="pt-5">Feed</h1>
+                        <div class="row row-cols-1 my-1 col-12m-auto" id="posts">
                     </div>
             </div>
         </div>
