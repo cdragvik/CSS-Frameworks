@@ -17,11 +17,11 @@ listeners.setUpdateProfileListener()
 // post.getPosts()
 
 
-// async function testTemplate() {
-//     const posts = await postMethods.getPosts();
-//     const post = posts.pop()
-//     const container = document.querySelector("#post");
-//     templates.renderPostTemplates(posts, container);
-// }
+async function testTemplates() {
+    const posts = await postMethods.getPosts();
+    const post = posts.pop()
+    const container = document.querySelector("#posts");
+    templates.renderPostTemplates(posts, container);
+}
 
-// testTemplate()
+testTemplates()

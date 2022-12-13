@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/dist/css/styles.css">
+    <script src="/src/js/index.mjs" type="module" defer></script>
 </head>
 <body class="bg-primary">
     <header class="sticky-top">
@@ -24,14 +25,36 @@
             </div>
           </nav>
     </header>
-    <main class="flex-grow-1 bg-light">
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-6">
-                    <!-- List of posts -->
+    <main class="flex-grow-1 bg-primary pt-5">
 
-                </div>
+        <form id="createPost" class="m-auto col-md-6 col-8 bg-light p-4">
+
+            <div class="form-group mb-3">
+              <label for="">Title</label>
+              <input type="text" name="title" class="form-control" placeholder="Title" required>
             </div>
+
+            <div class="form-group mb-3">
+                <label for="">Body</label>
+                <textarea  name="body" class="form-control" placeholder="What´s on your mind..." required></textarea>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="">Tags</label>
+                <input class="form-control" type="text" name="tags" placeholder="Tags, separated by comma (optional)">
+            </div>
+  
+            <div class="form-group mb-3">
+                <label for="">Media</label>
+                <input class="form-control" type="url" name="media" placeholder="Media URL (optional)">
+            </div>
+
+            <button class="btn btn-primary">Create post</button>
+        </form>
+
+        <h1 class="pt-5">Feed</h1>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4 my-1 col-10 m-auto" id="posts">
         </div>
     </main>
     <footer>
