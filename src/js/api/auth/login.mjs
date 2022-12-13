@@ -19,8 +19,6 @@ export async function login(profile) {
   const { accessToken, ...user } = await response.json();
 
   storage.save("token", accessToken);
-
   storage.save("profile", user);
-
-  alert("You are now logged in");
+  window.location.replace("../../../../posts/");
 }
