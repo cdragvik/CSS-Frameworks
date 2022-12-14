@@ -17,6 +17,10 @@ listeners.setUpdateProfileListener()
 // post.getPosts()
 
 
+
+
+// The function below is not the right way to display the feed of posts. 
+
 async function testTemplates() {
     const posts = await postMethods.getPosts();
     const post = posts.pop()
@@ -25,3 +29,5 @@ async function testTemplates() {
 }
 
 testTemplates()
+
+// The function above is not the right way to display the feed of posts.

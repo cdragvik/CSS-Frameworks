@@ -14,8 +14,8 @@
             <div class="container-fluid">
               <a class="navbar-brand" href="/posts/index.html"><img src="/images/SoMe.png" class="logo"></a>
                 <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="/posts/index.html">Home</a>
-                  <a class="nav-link" href="/profile/index.html">Profile</a>
+                  <a class="nav-link" aria-current="page" href="/posts/index.html">Home</a>
+                  <a class="nav-link active" href="/profile/index.html">Profile</a>
                   <a class="nav-link" href="/profile/login/index.html">Log out</a>
                 </div>
             </div>
@@ -25,24 +25,30 @@
         <div class="container">
             <div class="row pt-5 d-flex">
 
+                    <!-- User information fetched  -->
+
                     <div class="col-12 col-md-4">
+
                         <div class="text-center">
-                            <img src="/images/portrait.jpg" alt="Profile picture"class="rounded-circle logo">
-                            
+                            <img src="/images/portrait.jpg" alt="Profile picture"class="rounded-circle logo">   
                         </div>
-            
+
                         <div class="card p-2 bg-secondary m-2">
                             <h2>Username</h2>
                             <p>email@noroff.no</p>
+                            <a class="btn btn-light" href="/profile/edit/index.html">Edit profile</a>
                         </div>
 
                         <div class="card p-2 bg-secondary m-2">
                             <h2>Contacts</h2>
-
                         </div>
+                    
                     </div>
 
+
                     <div class="col-12 col-md-8 p-3">
+
+                        <!-- Form for crating posts -->
 
                         <form id="createPost" class="m-auto ccol-12 card p-4">
 
@@ -55,11 +61,13 @@
                 
                             <div class="form-group mb-3">
                                 <label for="">Body</label>
-                                <textarea  name="body" class="form-control" placeholder="What´s on your mind..." required></textarea>
+                                <textarea  name="body" class="form-control" placeholder="What's on your mind..." required></textarea>
                             </div>
                 
                             <button class="btn btn-light">Create post</button>
                         </form>
+
+                        <!-- Posts posted by user only, now it contains posts from all of the platform users -->
 
                         <h1 class="pt-5">Feed</h1>
                         <div class="row row-cols-1 my-1 col-12m-auto" id="posts">
@@ -67,8 +75,8 @@
             </div>
         </div>
     </main>
-    <footer>
-        <p class="bg-light p-3 m-0 text-center">&copy; Designed and built by Christiane Nanette Dragvik</p>
+    <footer class="mt-auto">
+        <p class="bg-light p-3 m-0 text-center">&copy; Social Media App - School Project - 2022</p>
     </footer>
 </body>
 </html>
