@@ -23,11 +23,8 @@
     </header>
     <main class="flex-grow-1 bg-primary pt-5">
 
-    <!-- Search bar here goes here -->
-    <!-- Filtering function goes here -->
-
+        <!-- Create post form -->
         <form id="createPost" class="m-auto col-md-6 col-8 card p-4">
-
             <h2>Share something</h2>
 
             <div class="form-group mb-3">
@@ -45,8 +42,15 @@
 
         <h1 class="pt-5">Feed</h1>
 
-        <div class="row row-cols-1 row-cols-md-2 g-4 my-1 col-10 m-auto" id="posts">
-        </div>
+        <!-- Search bar need functionality -->
+        <form class="d-flex p-4 m-auto col-md-6 col-8" id="search">
+            <!-- Filtering function goes here -->
+            <input class="form-control mr-sm-2 p-1" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-light my-2 my-sm-0 p-1" type="submit">Search</button>
+        </form>
+
+        <!-- Feed -->
+        <div class="row row-cols-1 row-cols-md-2 g-4 my-1 col-10 m-auto" id="posts"></div>
     </main>
     <footer>
         <footer class="mt-auto">
