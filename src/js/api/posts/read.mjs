@@ -9,12 +9,19 @@ export async function getPosts() {
     const getPostURL = `${BASE_URL}${action}`;
         
     const response = await authFetch (getPostURL)
+
+    console.log(response)
     
     return await response.json(); 
 }
 
 
-export async function getPost(id) {
+export async function getPostById() {
+    const queryString = document.location.search;
+    const params = new URLSearchParams(queryString);    
+    const id = params.get("id");
+
+    console.log(id)
 
     if (!id) {
         throw new Error("Get requires a postID");

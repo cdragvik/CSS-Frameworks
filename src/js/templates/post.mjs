@@ -16,6 +16,11 @@ export function postTemplate(postData) {
 }
 
 
-export function renderPostTemplates(postDataList, parent) {
-    parent.append(...postDataList.map(postTemplate))
+export function renderPostList(postDataList, parent) {
+    postDataList.map(data => parent.append(postTemplate(data))) 
+}
+
+
+export function renderSinglePost(postData, parent) {
+    parent.append(postTemplate(postData))
 }

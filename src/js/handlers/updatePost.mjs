@@ -1,4 +1,4 @@
-import { getPost, updatePost } from "../api/posts/index.mjs";
+import { updatePost } from "../api/posts/index.mjs";
 
 export async function setUpdateFormListener() {
   const form = document.querySelector("#editPost");
@@ -10,7 +10,7 @@ export async function setUpdateFormListener() {
     const button = form.querySelector("button");
     button.disabled = true; 
 
-    const post = await getPost(id); 
+    const post = await getPostById(); 
     
     form.title.value = post.title; 
     form.body.value = post.body;
