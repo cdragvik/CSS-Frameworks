@@ -17,33 +17,4 @@ async function getPost() {
     // const response = await authFetch (getPostURL)
     
     // return await response.json(); 
-
-    if (id === 0) {
-        return {"id": 0, 
-        "title": "A nice title", 
-        "body": "a long body", 
-        "tags": ["tag1", "tag2"], 
-        "media": "https://url.com/image.jpg",
-        "created": "2022-09-04T08:08:38.830Z",
-        "updated": "2022-09-04T08:08:38.830Z",
-        "_count": {
-            "comments": 0,
-            "reactions": 0
-          }
-        }
-    } else if (id === 1){
-        return {
-            "id": 1, 
-            "title": "A nice title 2", 
-            "body": "a long body 2", 
-            "tags": ["tag1", "tag2"], 
-            "media": "https://url.com/image.jpg",
-            "created": "2022-09-04T08:08:38.830Z",
-            "updated": "2022-09-04T08:08:38.830Z",
-            "_count": {
-                "comments": 2,
-                "reactions": 2
-            }
-        }
-    } else return null;
 }
