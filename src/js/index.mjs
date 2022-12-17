@@ -1,7 +1,4 @@
-
 import * as listeners from "./handlers/index.mjs"
-import * as templates from "./templates/index.mjs";
-import * as postMethods from "./api/posts/index.mjs";
 
 
 listeners.setRegisterFormListener()
@@ -21,13 +18,14 @@ listeners.setUpdateProfileListener()
 
 // The function below is not the right way to display the feed of posts. 
 
-async function testTemplates() {
-    const posts = await postMethods.getPosts();
-    const post = posts.pop()
-    const container = document.querySelector("#posts");
-    templates.renderPostTemplates(posts, container);
-}
+// async function testTemplates() {
+//      const posts = await postMethods.getPosts();
+//      const container = document.querySelector("#posts");
+//      templates.renderPostTemplates(posts, container);
+// }
 
-testTemplates()
+// testTemplates()
 
 // The function above is not the right way to display the feed of posts.
+
+export * from "./post/index.mjs"
