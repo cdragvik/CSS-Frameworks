@@ -10787,7 +10787,11 @@ h1, .h1 {
 }
 
 main {
-  padding: 20px;
+  padding: 50px;
+}
+
+form {
+  max-width: 800px;
 }
 
 /*# sourceMappingURL=styles.css.map */

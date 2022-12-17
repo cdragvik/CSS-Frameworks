@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/dist/css/styles.css">
-    <script src="/src/js/index.mjs" type="module" defer></script>
+    <script src="/src/js/post/getPostsForProfile.mjs" type="module" defer></script>
+    <script src="/src/js/profiles/read.mjs" defer type="module"></script>
+    <script src="/src/js/handlers/search.mjs" type="module" defer></script>
 </head>
 <body class="bg-primary">
     <header class="sticky-top">
@@ -34,8 +36,8 @@
 
                         <div class="card p-2 bg-secondary m-2">
                             <!-- User information -->
-                            <h2>Username</h2>
-                            <p>email@noroff.no</p>
+                            <h2 id="userName"></h2>
+                            <p id="userEmail"></p>
                             <a class="btn btn-light" href="/profile/edit/index.html">Edit profile</a>
                         </div>
 
@@ -64,6 +66,13 @@
                             </div>
                 
                             <button class="btn btn-light">Create post</button>
+                        </form>
+
+                        <!-- Search bar -->
+                        <form class="d-flex p-4 m-auto col-md-6 col-8" id="searchOnProfile">
+                            <!-- Filtering function goes here -->
+                            <input class="form-control mr-sm-2 p-1" type="text" placeholder="Search" aria-label="Search" name="searchInput" >
+                            <button class="btn btn-light my-2 my-sm-0 p-1" type="submit">Search</button>
                         </form>
 
                         <!-- Posts posted by user only, now it contains posts from all of the platform users -->

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/dist/css/styles.css">
-    <script src="/src/js/index.mjs" type="module" defer></script>
+    <script src="/src/js/index.mjs" defer type="module"></script>
+    <script src="/src/js/handlers/search.mjs" type="module" defer></script>
 </head>
 <body class="bg-primary">
     <header class="sticky-top">
@@ -43,7 +44,7 @@
         <!-- Search bar need functionality -->
         <form class="d-flex p-4 m-auto col-md-6 col-8" id="search">
             <!-- Filtering function goes here -->
-            <input class="form-control mr-sm-2 p-1" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control mr-sm-2 p-1" type="text" placeholder="Search" aria-label="Search" name="searchInput" >
             <button class="btn btn-light my-2 my-sm-0 p-1" type="submit">Search</button>
         </form>
 
