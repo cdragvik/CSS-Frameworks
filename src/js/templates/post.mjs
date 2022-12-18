@@ -7,14 +7,16 @@ export function postTemplate(postData) {
     const {email} = load("profile")
     const isAuthor = postData.author.email === email
     const myOwnSection = `
-        <a href="/post/edit/index.html"<button class="btn btn-light">Update post</button></a>
-        <a href=""<button class="btn btn-light">Delete post</button></a>`
+        <a href="/post/edit/index.html?id=${postData.id}"<button class="btn btn-light">Update post</button></a>`
+
+    const image = `<img src=${postData?.media} />`
 
     post.innerHTML =  `<div class="card p-2 mb-2" id=${postData.id}>
         <p class="text-muted">${postData.author.name}</p>
         <div>
             <h2>${postData.title}</h2>
             <p>${postData.body}</p>
+            ${postData.media ? image : ""}
             <a href="/post/index.html?id=${postData.id}"<button class="btn btn-light">Read more</button></a>
             ${isAuthor ? myOwnSection : ""}
                 <div class="d-flex text-muted pt-4">       
@@ -31,8 +33,7 @@ export function singlePostTemplate(postData) {
     const {email} = load("profile")
     const isAuthor = postData.author.email === email
     const myOwnSection = `
-        <a href="/post/edit/index.html"<button class="btn btn-light">Update post</button></a>
-        <a href=""<button class="btn btn-light">Delete post</button></a>`
+        <a href="/post/edit/index.html?id=${postData.id}"<button class="btn btn-light">Update post</button></a>`
 
     const post = document.createElement("div");
     post.classList.add("post");

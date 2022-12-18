@@ -1,22 +1,12 @@
 import { updatePost } from "../api/posts/index.mjs";
 
 export async function setUpdateFormListener() {
-  const form = document.querySelector("#editPost");
+  const form = document.querySelector("#editPostForm")
 
   const url = new URL(location.href);
   const id = url.searchParams.get("id");
 
   if (form) {
-    const button = form.querySelector("button");
-    button.disabled = true; 
-
-    const post = await getPostById(); 
-    
-    form.title.value = post.title; 
-    form.body.value = post.body;
-
-    button.disabled = false; 
-
     form.addEventListener("submit", (event) => {
       event.preventDefault()
       const form = event.target;

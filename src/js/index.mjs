@@ -7,6 +7,8 @@ listeners.setCreateFormListener()
 listeners.setUpdateFormListener()
 listeners.setUpdateProfileListener()
 listeners.setSearchFormListener()
+listeners.setDeleteFormListener()
+listeners.setFilterFormListener()
 
 // post.createPost()
 // post.updatePost()

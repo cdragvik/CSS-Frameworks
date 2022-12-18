@@ -51,6 +51,30 @@ export async function getPostsForProfile() {
 }
 
 
+
+
+
+
+
+export async function getPostsWithMedia() {
+
+    const getPostURL = `${BASE_URL}${action}?${include_author}`;
+        
+    const response = await authFetch (getPostURL)
+
+    const result = await response.json();
+
+    const filtered = result.filter(post => !!post.media)
+    
+    return filtered;
+}
+
+
+
+
+
+
+
 export async function getPostsBySearch(search, onProfile) {
 
     const getPostURL = `${BASE_URL}${action}?${include_author}`;
