@@ -9,7 +9,7 @@ export function postTemplate(postData) {
     const myOwnSection = `
         <a href="/post/edit/index.html?id=${postData.id}"<button class="btn btn-light">Update post</button></a>`
 
-    const image = `<img src=${postData?.media} />`
+    const image = `<img src=${postData?.media} class="img-fluid"/>`
 
     post.innerHTML =  `<div class="card p-2 mb-2" id=${postData.id}>
         <p class="text-muted">${postData.author.name}</p>
@@ -35,6 +35,8 @@ export function singlePostTemplate(postData) {
     const myOwnSection = `
         <a href="/post/edit/index.html?id=${postData.id}"<button class="btn btn-light">Update post</button></a>`
 
+    const image = `<img src=${postData?.media} class="img-fluid"/>`
+
     const post = document.createElement("div");
     post.classList.add("post");
     post.innerHTML =  `<div class="card p-2 mb-2" id=${postData.id}>
@@ -42,6 +44,7 @@ export function singlePostTemplate(postData) {
         <div>
             <h2>${postData.title}</h2>
             <p>${postData.body}</p>
+            ${postData.media ? image : ""}
             ${isAuthor ? myOwnSection : ""}
                 <div class="d-flex text-muted pt-4">       
                     <p class="me-3">Likes: ${postData._count.reactions}</p>
