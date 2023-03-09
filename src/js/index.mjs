@@ -1,3 +1,4 @@
+import { signout } from "./api/auth/logout.mjs"
 import * as listeners from "./handlers/index.mjs"
 
 
@@ -9,6 +10,8 @@ listeners.setUpdateProfileListener()
 listeners.setSearchFormListener()
 listeners.setDeleteFormListener()
 listeners.setFilterFormListener()
+
+signout();
 
 // post.createPost()
 // post.updatePost()
