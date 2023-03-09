@@ -41,6 +41,7 @@ function fillProfileData() {
         const email = profile.email
         profileEmailContainer.append(email)
     }
+    
 }
 
 fillProfileData()

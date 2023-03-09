@@ -10,6 +10,8 @@
     <script src="/src/js/profiles/read.mjs" defer type="module"></script>
     <script src="/src/js/handlers/search.mjs" type="module" defer></script>
     <script src="/src/js/index.mjs" type="module" defer></script>
+
+    <script src="/src/js/profiles/fillprofile.mjs" type="module" defer></script>
 </head>
 <body class="bg-primary">
     <header class="sticky-top">
@@ -30,13 +32,8 @@
 
                     <div class="col-12 col-md-4">
 
-                        <div class="text-center">
-                            <!-- Sould be users avatar -->
-                            <img src="/images/proflie.png" alt="Profile picture"class="rounded-circle logo">   
-                        </div>
-
                         <div class="card p-2 bg-secondary m-2">
-                            <!-- User information -->
+                            <div class="p-1" id="userAvatar"></div>
                             <h2 id="userName"></h2>
                             <p id="userEmail"></p>
                             <a class="btn btn-light" href="/profile/edit/index.html">Edit profile</a>

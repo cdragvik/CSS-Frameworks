@@ -1,15 +1,12 @@
 import { BASE_URL } from "../api/constants.mjs"; 
 import { authFetch } from "../api/authFetch.mjs";
+import { save } from "../storage/index.mjs";
 
 const action = "/profiles";
 const method = "put";
 
 export async function updateProfile(profileData) {
 
-    if (!profileData.name) {
-        throw new Error("Update requires a name");
-    }
-    
     const updateProfileURL = `${BASE_URL}${action}/${profileData.name}/media`;
     
     const response = await authFetch (updateProfileURL, {
@@ -17,5 +14,9 @@ export async function updateProfile(profileData) {
         body: JSON.stringify(profileData)
     })
 
-    return await response.json(); 
+    const updatedProfile = await response.json(); 
+    save ("profile", updatedProfile)
+    alert("You have successfully updated your avatar!")
+    window.location.replace("../../../../profile")
+    return updatedProfile; 
 }

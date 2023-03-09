@@ -10,7 +10,6 @@ export async function setUpdateProfileListener() {
         form.name.value = name; 
         form.email.value = email;
 
-
         const button = form.querySelector("button");
         button.disabled = true; 
 
@@ -26,9 +25,12 @@ export async function setUpdateProfileListener() {
         const form = event.target;
         const formData = new FormData(form);
         const profile = Object.fromEntries(formData.entries())
+
+        profile.name = name; 
+        profile.email = email; 
         
         // Send it to the API
-        updateProfile(post)
+        updateProfile(profile)
     })
   }
 }
