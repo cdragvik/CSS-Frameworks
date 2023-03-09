@@ -4,6 +4,10 @@ export function postTemplate(postData) {
     const post = document.createElement("div");
     post.classList.add("post");
 
+
+    const loader = document.querySelector(".loader");
+    loader.style.display ="none";
+
     const {email} = load("profile")
     const isAuthor = postData.author.email === email
     const myOwnSection = `
@@ -29,6 +33,9 @@ export function postTemplate(postData) {
 
 
 export function singlePostTemplate(postData) {
+
+    const loader = document.querySelector(".loader");
+    loader.style.display ="none";
 
     const {email} = load("profile")
     const isAuthor = postData.author.email === email
