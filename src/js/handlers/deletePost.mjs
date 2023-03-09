@@ -18,6 +18,8 @@ export async function setDeleteFormListener() {
       event.preventDefault()
 
       removePost(post.id)
+      alert("You have successfully deleted your post")
+      window.location.replace("../../../profile/index.html")
       
       // Send it to the API
       // createPost(post)

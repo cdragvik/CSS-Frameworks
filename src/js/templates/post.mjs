@@ -1,12 +1,12 @@
 import { load } from "../storage/index.mjs";
 
 export function postTemplate(postData) {
-    const post = document.createElement("div");
-    post.classList.add("post");
-
 
     const loader = document.querySelector(".loader");
-    loader.style.display ="none";
+    loader.style.display = "none";
+
+    const post = document.createElement("div");
+    post.classList.add("post");
 
     const {email} = load("profile")
     const isAuthor = postData.author.email === email
